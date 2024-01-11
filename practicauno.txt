@@ -1,0 +1,13 @@
+public class Main {
+public static void main(String[] args) {
+/*Primera pr ctica
+ Realizar la pr ctica del primer programa que diga "hola mundo" o saludar
+
+ Autores:
+-Cesar Eyddel Escobedo Ram¡rez
+-Alan Tlalpa S nchez
+-Miriam Mej¡a Rojas
+ -Missael Ortiz Flores */
+ System.out.print("Hola Mundo uwu");
+}
+}
