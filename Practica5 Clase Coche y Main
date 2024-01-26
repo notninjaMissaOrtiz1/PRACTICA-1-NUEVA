@@ -1,0 +1,104 @@
+/*
+ -UPTX Fundamentos de POO
+ -Practica 5 5H
+ -Missael Ortiz Flores 2231123416
+ -Objetivo: Realizar la clase Coche y clase Main donde se visualizen 3 objetos con sus repectivos diagramas UML
+ -Modificación 20/01/2024
+*/
+package tilín; // Paquete al que pertenece la clase
+
+public class Coche {
+    private String marca; // Marca del coche
+    private String modelo; // Modelo del coche
+    private int anio; // Año de fabricación del coche
+    private int velocidadActual; // Velocidad actual del coche
+    private static int numCoche = 0; // Contador estático para el número total de coches
+
+    // Constructor por defecto
+    public Coche() {
+        marca = "";
+        modelo = "";
+        anio = 0;
+        velocidadActual = 0;
+        contarCoches(); // Método para incrementar el contador de coches
+    }
+
+    // Constructor con parámetros
+    public Coche(String marca, String modelo, int anio, int velocidadActual) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anio = anio;
+        this.velocidadActual = velocidadActual;
+        contarCoches(); // Método para incrementar el contador de coches
+    }
+
+    // Método estático para contar la cantidad total de coches
+    static void contarCoches() {
+        numCoche++;
+    }
+
+    // Métodos de acceso (Getters y Setters) para cada atributo
+
+    public static int getNumCoche() {
+        return numCoche;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public int getVelocidadActual() {
+        return velocidadActual;
+    }
+
+    public void setVelocidadActual(int velocidadActual) {
+        this.velocidadActual = velocidadActual;
+    }
+}
+import tilín.Coche;
+/*
+ -Universidad Politécnica de Tlaxcala
+ -Fundamentos de Programación Orientada a Objetos
+ -Práctica 5 - 5H
+ -Mstro: Saúl Olaf Loaiza Meléndez
+ -Modificación 20/01/2024
+ */
+public class Main {
+    public static void main(String[] args) {
+        //instancia de objetos
+        Coche registro1 = new Coche("Nissan","Kicks",2023,30000);
+        Coche registro2 = new Coche("Toyota", "Corolla",2022, 25700);
+        Coche registro3 = new Coche("Honda", "Civic",2021,22222);
+        //mostrar objetos de clase
+        System.out.println("Marca:");
+        System.out.println(registro1.getMarca());
+        System.out.println(registro2.getMarca());
+        System.out.println(registro3.getMarca());
+        System.out.println("Modelo:");
+        System.out.println(registro1.getModelo());
+        System.out.println(registro2.getModelo());
+        System.out.println(registro3.getModelo());
+        System.out.println("Total de autos contados:");
+        System.out.println(Coche.getNumCoche());
+    }
+}
