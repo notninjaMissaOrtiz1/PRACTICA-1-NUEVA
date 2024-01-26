@@ -1,0 +1,57 @@
+/**
+ * UPTx - Fundamentos de POO
+ * Práctica 3 Grupo 5H
+ * Objetivo: Documentación de código
+ * Alumno: Missael Ortiz Flores 2231123416
+ */
+
+import java.util.Scanner; // Librería para la función Scanner (lectura de entrada de teclado)
+
+public class Main {
+    public static void main(String[] args) {
+        // Declaración de variables
+        int numInt; // Variable de tipo ENTERO
+        double numDbl, res1, res2, res3, res4, res5, res6; // Variables de tipo DECIMAL (REAL)
+
+        // Mensaje de bienvenida
+        System.out.print("Bienvenido, por favor sigue las instrucciones\n");
+
+        // Función que permite leer datos ingresados por el usuario en la consola
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar y leer un número entero
+        System.out.printf("\nDigite un número entero:");
+        numInt = scanner.nextInt();
+
+        // Solicitar y leer un número decimal
+        System.out.printf("\nDigite un número decimal:");
+        numDbl = scanner.nextDouble();
+
+        // Operaciones matemáticas
+        // 1. Suma de un número REAL y uno ENTERO, resultado guardado en "res1"
+        res1 = numDbl + numInt;
+
+        // 2. División entre un número ENTERO y uno (ENTERO) REAL, resultado guardado en "res2"
+        res2 = numInt / (int) numDbl;
+
+        // 3. División entre un número ENTERO y uno REAL, resultado guardado en "res3"
+        res3 = numInt / numDbl;
+
+        // 4. División entre un número REAL y uno ENTERO, resultado guardado en "res4"
+        res4 = numDbl / numInt;
+
+        // 5. División entre un número (ENTERO) REAL y uno ENTERO, resultado guardado en "res5"
+        res5 = (int) numDbl / numInt;
+
+        // 6. Suma de un número (ENTERO) REAL y uno ENTERO, resultado guardado en "res6"
+        res6 = (int) numDbl + numInt;
+
+        // Mostrar los resultados de las operaciones uno por uno
+        System.out.printf("\nEl resultado de la suma es: %f\n", res1);
+        System.out.printf("El resultado de la división (1) es: %f\n", res2);
+        System.out.printf("El resultado de la división (2) es: %f\n", res3);
+        System.out.printf("El resultado de la división (3) es: %f\n", res4);
+        System.out.printf("El resultado de la división (4) es: %f\n", res5);
+        System.out.printf("El resultado de la suma (2) es: %f\n", res6);
+    }
+}
